@@ -1,0 +1,69 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-08-13T03:37:47.489Z",
+        "line": 13,
+        "name": "Validar que un elemento está en la respuesta",
+        "description": "",
+        "id": "ejemplo-de-request;validar-que-un-elemento-está-en-la-respuesta",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1206773500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I send a GET request to the https://jsonplaceholder.typicode.com URI",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://jsonplaceholder.typicode.com",
+                  "offset": 28
+                }
+              ],
+              "location": "Steps.APISteps.sendGETRequest(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3391309000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I validate there is a value: Bret in the response at /users endpoint",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Bret",
+                  "offset": 29
+                },
+                {
+                  "val": "/users",
+                  "offset": 53
+                }
+              ],
+              "location": "Steps.APISteps.validateValue(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@API"
+          }
+        ]
+      }
+    ],
+    "name": "Ejemplo de request",
+    "description": "",
+    "id": "ejemplo-de-request",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/APITest.feature",
+    "tags": []
+  }
+]
